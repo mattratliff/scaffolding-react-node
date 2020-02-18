@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "mattratliff",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "xuvcmrqyjpukhs",
+    "password": "43095f06230dfb2defda971d4165a3ce7bc449f5aae0651e02b821f6aa5e0f9f",
+    "database": "defmhr6uqvbp6o",
+    "host": "ec2-174-129-253-104.compute-1.amazonaws.com",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "xuvcmrqyjpukhs",
+    "password": "43095f06230dfb2defda971d4165a3ce7bc449f5aae0651e02b821f6aa5e0f9f",
+    "database": "defmhr6uqvbp6o",
+    "host": "ec2-174-129-253-104.compute-1.amazonaws.com",
+    "dialect": "postgres"
+  }
+}

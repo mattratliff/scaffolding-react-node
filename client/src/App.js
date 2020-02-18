@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './ExelarationCenter.png';
-import './App.css';
+import './site-layout.css';
 
 export default class App extends Component {
   constructor(props) {

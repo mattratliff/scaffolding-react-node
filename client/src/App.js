@@ -25,14 +25,16 @@ export default class App extends Component {
         <div className="wrapper">
           <header className="main-head">The header</header>
           <nav className="sub-head">
-            <div><button>Home</button></div>
-            <div><button>About Us</button></div>
+            <div><button>Menu Option 1</button></div>
+            <div><button>Menu Option 2</button></div>
+            <div><button>Menu Option 3</button></div>
+            <div><button>Menu Option 4</button></div>
           </nav>
           <nav className="main-nav">
               <ul>
-                  <li><a href="">Nav 1</a></li>
-                  <li><a href="">Nav 2</a></li>
-                  <li><a href="">Nav 3</a></li>
+                  <li><a href="">Side Nav 1</a></li>
+                  <li><a href="">Side Nav 2</a></li>
+                  <li><a href="">Side Nav 3</a></li>
               </ul>
           </nav>
           <article className="content">

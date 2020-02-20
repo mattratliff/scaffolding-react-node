@@ -28,6 +28,7 @@
     border:1px solid black;
     border-radius: 5px;
     padding: 10px;
+    margin-top: 80px;
 }
 
 nav ul {
@@ -42,9 +43,56 @@ nav div {
 .main-head {
   grid-area: header;
 }
+p {
+  height:3000px;
+}
+button {
+  color:white;
+  border:0px;
+  font-size:12pt;
+  margin-right: 10px;
+  margin-top:10px;
+  cursor:pointer;
+}
+.header-options {
+  width: 100%;
+}
+.main-head-style {
+  background-color: #737373;
+  color: white;
+  padding:10px;
+  width:100%;
+  position: fixed;
+  height: 40px;
+  top: 0px;
+  left: 0px; 
+}
+.logo {
+  width: 150px;
+  height: auto;
+}
 .sub-head {
   grid-area: mainnav;
+  color: white;
+  padding:10px;
+  width:100%;
+  height: 5ph;
+  position: fixed;
+  top: 40px;
+  left: 0px;
 }
+button, .sub-head {
+  background-color:#4d4d4d;
+}
+
+
+.sub-header-left {
+  width: 20vw;
+}
+.sub-header-right{
+  width: 80vw;
+}
+
 .content {
   grid-area: content;
 }

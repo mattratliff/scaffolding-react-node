@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './ExelarationCenter.png';
-import './site-layout.css';
+import './css/site-layout.css';
 
 export default class App extends Component {
   constructor(props) {
@@ -22,14 +22,23 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="wrapper">
-          <header className="main-head">The header</header>
+        <div class="header-options">
+          <header className="main-head main-head-style"></header>
           <nav className="sub-head">
-            <div><button>Menu Option 1</button></div>
-            <div><button>Menu Option 2</button></div>
-            <div><button>Menu Option 3</button></div>
-            <div><button>Menu Option 4</button></div>
-          </nav>
+            <div className="sub-header-left">
+              <img class="logo" src={logo}/>
+            </div>
+            <div className="sub-header-right">
+              <button>Home</button>
+              <button>Projects</button>
+              <button>Blogs</button>
+              <button>About Me</button>
+            </div>
+            </nav>
+        </div>
+        <div className="wrapper">
+          
+
           <nav className="main-nav">
               <ul>
                   <li><a href="">Side Nav 1</a></li>
@@ -40,6 +49,7 @@ export default class App extends Component {
           <article className="content">
               <h1>Main article area</h1>
               <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
+              
           </article> 
           <aside className="side">Sidebar</aside>
           <div className="ad">Advertising</div>

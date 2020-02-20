@@ -46,12 +46,13 @@ nav div {
 p {
   height:3000px;
 }
-button {
+button, .link-nav {
   color:white;
   border:0px;
   font-size:12pt;
   margin-right: 10px;
   margin-top:10px;
+  text-decoration: none;
   cursor:pointer;
 }
 .header-options {
@@ -81,7 +82,7 @@ button {
   top: 40px;
   left: 0px;
 }
-button, .sub-head {
+button, .sub-head, .link-nav{
   background-color:#4d4d4d;
 }
 

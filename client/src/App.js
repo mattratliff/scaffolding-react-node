@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import logo from './ExelarationCenter.png';
+import logo from './assets/ExelarationCenter.png';
 import './css/site-layout.css';
+
+import Home from './Home/Home'
+import Projects from './Projects/Projects'
+import Blogs from './Blogs/Blogs'
+import About from './About/About'
+
+import { BrowserRouter as Router, Switch, Route, Redirect, Link} from 'react-router-dom';
 
 export default class App extends Component {
   constructor(props) {
@@ -21,6 +28,7 @@ export default class App extends Component {
 
   render() {
     return (
+      <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <div class="header-options">
           <header className="main-head main-head-style"></header>
@@ -29,16 +37,14 @@ export default class App extends Component {
               <img class="logo" src={logo}/>
             </div>
             <div className="sub-header-right">
-              <button>Home</button>
-              <button>Projects</button>
-              <button>Blogs</button>
-              <button>About Me</button>
+              <button><Link class="link-nav" to='/home'>Home</Link></button>
+              <button><Link class="link-nav" to='/projects'>Projects</Link></button>
+              <button><Link class="link-nav" to='/blogs'>Blogs</Link></button>
+              <button><Link class="link-nav" to='/about'>About Me</Link></button>
             </div>
             </nav>
         </div>
         <div className="wrapper">
-          
-
           <nav className="main-nav">
               <ul>
                   <li><a href="">Side Nav 1</a></li>
@@ -47,16 +53,22 @@ export default class App extends Component {
               </ul>
           </nav>
           <article className="content">
-              <h1>Main article area</h1>
-              <p>In this layout, we display the areas in source order for any screen less that 500 pixels wide. We go to a two column layout, and then to a three column layout by redefining the grid, and the placement of items on the grid.</p>
-              
+          <Switch>
+          <Route exact path= "/" render={() => (
+                  <Redirect to="/home"/>
+                )}/>
+                 <Route exact path='/home' component={Home} />
+                 <Route exact path='/projects' component={Projects} />
+                 <Route exact path='/blogs' component={Blogs} />
+                 <Route exact path='/about' component={About} />
+          </Switch>
           </article> 
           <aside className="side">Sidebar</aside>
           <div className="ad">Advertising</div>
           <footer className="main-footer">The footer</footer>
         </div>
       </div>
-
+      </Router>
     )
   }
 }
